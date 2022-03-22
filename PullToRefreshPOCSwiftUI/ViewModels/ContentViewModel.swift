@@ -13,16 +13,15 @@ import Combine
     @Published var isLoadingPage: Bool = false
     @Published var items: [ListItem] = []
     
+    private var service = NetworkService()
+    
     var currentPage = 1
     
     private var canLoadMorePages = true
     private var cancellables = Set<AnyCancellable>()
-    private var url: URL {
-        URL(string: "https://s3.eu-west-2.amazonaws.com/com.donnywals.misc/feed-\(currentPage).json")!
-    }
     
     init() {
-        loadData { self.handleResult($0) }
+        loadItems()
     }
     
     private func reset() {
@@ -42,48 +41,24 @@ import Combine
             print(error)
         }
     }
-
-    func refreshContent() async {
-        print("Start loading data")
-        
-        reset()
-                
-        let asyncData = await withCheckedContinuation { continuation in
-            loadData { result in
-                continuation.resume(returning: result)
-            }
+    
+    func loadItems() {
+        guard !isLoadingPage && canLoadMorePages else {
+            return
         }
-            
-        self.handleResult(asyncData)
         
-        print("Data loaded")
+        service.loadData(page: currentPage) { result in
+            self.handleResult(result)
+        }
     }
 }
 
 // MARK: - Data
 
 extension ContentViewModel {
-    func loadData(completion: @escaping (Result<ListResponse, RequestError>) -> Void) {
-        guard !isLoadingPage && canLoadMorePages else {
-            completion(.failure(.unauthorized))
-            return
-        }
-        
-        isLoadingPage = true
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let listResponse = try JSONDecoder().decode(ListResponse.self, from: data)
-
-            completion(.success(listResponse))
-        } catch {
-            completion(.failure(.noResponse))
-        }
-    }
-    
     func loadMoreContentIfNeeded(currentItem item: ListItem?) {
         guard let item = item else {
-            loadData { self.handleResult($0) }
+            loadItems()
 
             return
         }
@@ -91,7 +66,19 @@ extension ContentViewModel {
         let thresholdIndex = items.index(items.endIndex, offsetBy: -1)
         
         if items.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
-            loadData { self.handleResult($0) }
+            loadItems()
         }
+    }
+    
+    func refreshContent() async {
+        reset()
+                
+        let asyncData = await withCheckedContinuation { continuation in
+            service.loadData(page: currentPage) { result in
+                continuation.resume(returning: result)
+            }
+        }
+            
+        self.handleResult(asyncData)
     }
 }

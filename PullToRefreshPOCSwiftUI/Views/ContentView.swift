@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-import Introspect
+import RefreshableScrollView
 
 struct ContentView: View {
     @ObservedObject var viewModel = ContentViewModel()
@@ -22,11 +22,11 @@ struct ContentView: View {
                     .padding(.all, 30)
             }
         }
-        .refreshable {
+        .onRefresh {
             await viewModel.refreshContent()
         }
         .onAppear {
-            print("[LIST]: - Appeared")
+            viewModel.loadItems()
         }
     }
 }

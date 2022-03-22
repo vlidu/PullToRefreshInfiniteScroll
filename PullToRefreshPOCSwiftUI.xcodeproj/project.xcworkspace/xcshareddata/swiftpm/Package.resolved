@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "RefreshableScrollView",
+        "repositoryURL": "https://github.com/vlidu/RefreshableScrollView",
+        "state": {
+          "branch": "main",
+          "revision": "d6c8f586e023190bcdae22381771fb529a419ff6",
+          "version": null
+        }
+      },
+      {
         "package": "Introspect",
         "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect",
         "state": {

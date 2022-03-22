@@ -12,16 +12,10 @@
 		A12D7D2327E8CC4800D0F179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12D7D2227E8CC4800D0F179 /* Assets.xcassets */; };
 		A12D7D2627E8CC4800D0F179 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12D7D2527E8CC4800D0F179 /* Preview Assets.xcassets */; };
 		A12D7D3227E8DD7700D0F179 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12D7D3127E8DD7700D0F179 /* ListResponse.swift */; };
-		A1F1628527E9C41300B92258 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = A1F1628427E9C41300B92258 /* Introspect */; };
-		A1F1628827E9C55A00B92258 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1628727E9C55A00B92258 /* UIScrollView+Extensions.swift */; };
-		A1F1628A27E9C58500B92258 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1628927E9C58500B92258 /* View+Extensions.swift */; };
-		A1F1628D27E9C5AF00B92258 /* OnListRefreshModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1628C27E9C5AF00B92258 /* OnListRefreshModifier.swift */; };
 		A1F1629027E9C63F00B92258 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1628F27E9C63F00B92258 /* ContentViewModel.swift */; };
-		A1F1629227E9C69100B92258 /* RefreshableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1629127E9C69100B92258 /* RefreshableModifier.swift */; };
-		A1F1629827E9C74000B92258 /* RefreshAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1629727E9C74000B92258 /* RefreshAction.swift */; };
-		A1F1629A27E9C76F00B92258 /* RefreshActionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1629927E9C76F00B92258 /* RefreshActionKey.swift */; };
-		A1F1629C27E9C79700B92258 /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1629B27E9C79700B92258 /* EnvironmentValues+Extensions.swift */; };
 		A1F1629F27EA06B500B92258 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F1629E27EA06B500B92258 /* RequestError.swift */; };
+		A1F162A827EA1B9600B92258 /* RefreshableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = A1F162A727EA1B9600B92258 /* RefreshableScrollView */; };
+		A1F162AA27EA219D00B92258 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F162A927EA219D00B92258 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +25,9 @@
 		A12D7D2227E8CC4800D0F179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12D7D2527E8CC4800D0F179 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A12D7D3127E8DD7700D0F179 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
-		A1F1628727E9C55A00B92258 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
-		A1F1628927E9C58500B92258 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		A1F1628C27E9C5AF00B92258 /* OnListRefreshModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnListRefreshModifier.swift; sourceTree = "<group>"; };
 		A1F1628F27E9C63F00B92258 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		A1F1629127E9C69100B92258 /* RefreshableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableModifier.swift; sourceTree = "<group>"; };
-		A1F1629727E9C74000B92258 /* RefreshAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAction.swift; sourceTree = "<group>"; };
-		A1F1629927E9C76F00B92258 /* RefreshActionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshActionKey.swift; sourceTree = "<group>"; };
-		A1F1629B27E9C79700B92258 /* EnvironmentValues+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extensions.swift"; sourceTree = "<group>"; };
 		A1F1629E27EA06B500B92258 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		A1F162A927EA219D00B92258 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F1628527E9C41300B92258 /* Introspect in Frameworks */,
+				A1F162A827EA1B9600B92258 /* RefreshableScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +61,6 @@
 		A12D7D1D27E8CC4700D0F179 /* PullToRefreshPOCSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				A1F1629327E9C70B00B92258 /* RefreshModule */,
 				A1F1629D27EA06AD00B92258 /* Network */,
 				A1F1628E27E9C63200B92258 /* ViewModels */,
 				A12D7D3027E8DD6800D0F179 /* Views */,
@@ -117,48 +104,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		A1F1629327E9C70B00B92258 /* RefreshModule */ = {
-			isa = PBXGroup;
-			children = (
-				A1F1629627E9C71D00B92258 /* Models */,
-				A1F1629527E9C71800B92258 /* Modifiers */,
-				A1F1629427E9C71400B92258 /* Extensions */,
-			);
-			path = RefreshModule;
-			sourceTree = "<group>";
-		};
-		A1F1629427E9C71400B92258 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A1F1628727E9C55A00B92258 /* UIScrollView+Extensions.swift */,
-				A1F1628927E9C58500B92258 /* View+Extensions.swift */,
-				A1F1629B27E9C79700B92258 /* EnvironmentValues+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A1F1629527E9C71800B92258 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				A1F1628C27E9C5AF00B92258 /* OnListRefreshModifier.swift */,
-				A1F1629127E9C69100B92258 /* RefreshableModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		A1F1629627E9C71D00B92258 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A1F1629727E9C74000B92258 /* RefreshAction.swift */,
-				A1F1629927E9C76F00B92258 /* RefreshActionKey.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		A1F1629D27EA06AD00B92258 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				A1F1629E27EA06B500B92258 /* RequestError.swift */,
+				A1F162A927EA219D00B92258 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -180,7 +130,7 @@
 			);
 			name = PullToRefreshPOCSwiftUI;
 			packageProductDependencies = (
-				A1F1628427E9C41300B92258 /* Introspect */,
+				A1F162A727EA1B9600B92258 /* RefreshableScrollView */,
 			);
 			productName = PullToRefreshPOCSwiftUI;
 			productReference = A12D7D1B27E8CC4700D0F179 /* PullToRefreshPOCSwiftUI.app */;
@@ -211,7 +161,7 @@
 			);
 			mainGroup = A12D7D1227E8CC4700D0F179;
 			packageReferences = (
-				A1F1628327E9C41300B92258 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				A1F162A627EA1B9600B92258 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */,
 			);
 			productRefGroup = A12D7D1C27E8CC4700D0F179 /* Products */;
 			projectDirPath = "";
@@ -239,17 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F1629C27E9C79700B92258 /* EnvironmentValues+Extensions.swift in Sources */,
 				A12D7D3227E8DD7700D0F179 /* ListResponse.swift in Sources */,
-				A1F1628A27E9C58500B92258 /* View+Extensions.swift in Sources */,
-				A1F1628827E9C55A00B92258 /* UIScrollView+Extensions.swift in Sources */,
-				A1F1629A27E9C76F00B92258 /* RefreshActionKey.swift in Sources */,
-				A1F1629227E9C69100B92258 /* RefreshableModifier.swift in Sources */,
-				A1F1629827E9C74000B92258 /* RefreshAction.swift in Sources */,
 				A1F1629027E9C63F00B92258 /* ContentViewModel.swift in Sources */,
 				A1F1629F27EA06B500B92258 /* RequestError.swift in Sources */,
-				A1F1628D27E9C5AF00B92258 /* OnListRefreshModifier.swift in Sources */,
 				A12D7D2127E8CC4700D0F179 /* ContentView.swift in Sources */,
+				A1F162AA27EA219D00B92258 /* NetworkService.swift in Sources */,
 				A12D7D1F27E8CC4700D0F179 /* PullToRefreshPOCSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,21 +399,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A1F1628327E9C41300B92258 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		A1F162A627EA1B9600B92258 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			repositoryURL = "https://github.com/vlidu/RefreshableScrollView";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A1F1628427E9C41300B92258 /* Introspect */ = {
+		A1F162A727EA1B9600B92258 /* RefreshableScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A1F1628327E9C41300B92258 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
+			package = A1F162A627EA1B9600B92258 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */;
+			productName = RefreshableScrollView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
